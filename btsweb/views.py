@@ -27,6 +27,5 @@ def event(request):
         return render(request, 'btsweb/check.html', context)
     return render(request,'btsweb/event.html')
 
-def check(request):
-    
-    return render(request,'btsweb/check.html')
+# def check(request):
+#     return render(request,'btsweb/check.html')
