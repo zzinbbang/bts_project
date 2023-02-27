@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <script src="https://kit.fontawesome.com/dfc71a94a6.js" crossorigin="anonymous"></script>
+        <script src="{% static 'javascript/js/main.js'%}" defer></script>
+        <script src="{% static 'javascript/js/slide.js'%}" defer></script>
+    <title>BTS 이벤트 응모</title>
+  </head>
+
+  <body>
+    <header>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <a href="{% url 'main' %}"><img src="{% static 'images/logo_main.jpg'%}"style="max-width: 200px; height: 100px; float:left;"></a>
+        <li class="main_subject"style="width:800px; float:left;">The New BTS Album Release event</li>
+
+      <ul class="navbar__menu">
+        <li><a href="{% url 'event' %}">응모하기</a></li>
+      </ul>      
+      <a href="#" class="navbar__toggleBtn">
+        <i class="fab fa-slack"></i>
+     </a>
+    </nav></div>
+</header>
+
+<body>
+    <div>
+        <h3>내용을 확인해 주세요</h3>
+    </div>
+      <label for="test">신청번호 : </label>
+      <input type="text" name="un" value="{{un}}" disabled>
+</body>
+</html>
+
+<footer class="footer">
+  <div id="footer_box">
+      <div id="footer_logo">
+          <img src="{% static 'images/logo_main.jpg'%}"style="max-width: 100px; height: 100px;">
+      </div>
+      <div id="address">
+          <ul>
+              <li>(주) @@엔터테이먼트   서울시 금천구 가산로</li>
+              <li>대표이사 : 5 team</li>
+              <li>사업자 등록 번호 : @@@-@@-@@@@@</li>
+              <li>TEL : 010-0000-0000 Email : ####@google.com</li>
+              <li>COPYRIGHT (C) @@@ ALL RIGHTS RESERVED</li>
+          </ul>
+      </div>
+  </div>
+</footer> 
+</body>
+</html>

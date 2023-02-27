@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <script src="https://kit.fontawesome.com/dfc71a94a6.js" crossorigin="anonymous"></script>
+        <script src="{% static 'javascript/js/main.js'%}" defer></script>
+        <script src="{% static 'javascript/js/slide.js'%}" defer></script>
+    <title>BTS 이벤트 응모</title>
+  </head>
+
+  <body>
+    <header>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <a href="{% url 'main' %}"><img src="{% static 'images/logo_main.jpg'%}"style="max-width: 200px; height: 100px;float:left;"></a>
+        <li class="main_subject"style="width:1000px; float:left;">The New BTS Album Release event</li>
+      </div>
+
+      <ul class="navbar__menu">
+        <li><a href="{% url 'event' %}">응모하기</a></li>
+      </ul>      
+      <a href="#" class="navbar__toggleBtn">
+        <i class="fab fa-slack"></i>
+     </a>
+    </nav></div>
+</header>
+<div class="wrap">
+<div class="event_script"><center>
+<div style="font-size:50px;"><center>공지사항</center></div>
+<div class="box"style="width: 40%; height: 600px; background-color:grey; overflow-y: scroll;">
+    <div style="font-size:20px; float:left;">
+        공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.
+    </div>
+</div>
+<div style="font-size:40px; margin-top:30px;margin-bottom:20px;">EVENT</div>
+<hr width="40%" color="purple">
+<div>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td class="event_text">FIRST_NAME : </td>
+                <td><input type="text" name="fname" style="width:300px;height:30px;font-size:25px;"></td>
+            </tr>
+            <tr>
+                <td class="event_text">LAST_NAME : </td>
+                <td><input type="text" name="lname" style="width:300px;height:30px;font-size:25px;"></td>
+            </tr>
+            <tr>
+                <td class="event_text">BIRTHDAY : </td>
+                <td><input type="date" name="birthday" style="width:300px;height:30px;font-size:25px;"></td>
+            </tr>
+            <tr>
+                <td class="event_text">PHONE : </td>
+                <td><input type="text" name="phone" placeholder="-빼고 입력하세요."style="width:300px;height:30px;font-size:25px;"></td>
+            </tr>
+            <tr>
+                <td class="event_text">EMAIL : </td>
+                <td><input type="email" name="email" style="width:300px;height:30px;font-size:25px;"></td>
+            </tr>
+            <tr>
+                <td class="event_text">ADDRESS : </td>
+                <td><input type="text" name="address" style="width:300px;height:30px;font-size:25px;"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+        <div>
+            <div class="button2"><button type='submit'>응모하기</button></div>
+        </div>
+        </form>
+</center>
+<tr>
+    <td>&nbsp;</td>
+</tr>
+<div class='clear'></div>
+</div>
+<footer class="footer">
+    <div id="footer_box">
+        <div id="footer_logo">
+            <img src="{% static 'images/logo_main.jpg'%}"style="max-width: 100px; height: 100px;">
+        </div>
+        <div id="address">
+            <ul>
+                <li>(주) @@엔터테이먼트   서울시 금천구 가산로</li>
+                <li>대표이사 : 5 team</li>
+                <li>사업자 등록 번호 : @@@-@@-@@@@@</li>
+                <li>TEL : 010-0000-0000 Email : ####@google.com</li>
+                <li>COPYRIGHT (C) @@@ ALL RIGHTS RESERVED</li>
+            </ul>
+        </div>
+    </div>
+  </footer> 
+</body>
+</html>

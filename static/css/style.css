@@ -1,0 +1,357 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #161616;
+  --accent-color: grey;
+  --icons-color: rgb(152, 187, 201);
+  --bodybackground-color: white;
+}
+html {
+  height: 100%
+}
+body { 
+  margin: 0;
+  background-color: var(--bodybackground-color);
+  font-family: 'STIX Two Math';
+  height:100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.main_script{
+
+  font-size:40px;
+}
+.main_script2{
+
+  font-size:20px;
+}
+.main_subject {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+  font-size:40px;
+  padding: 15px 30px;
+  color:white
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image:url(../images/background.jpg);
+  background-color: var(--background-color);
+  padding: 8px 12px;
+  font-family: 'STIX Two Math';
+  
+}
+
+.navbar__menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+  font-size:20px;
+}
+
+.navbar__menu li {
+  padding: 8px 30px;
+}
+
+.navbar__menu li:hover {
+  background-color: var(--accent-color);
+  border-radius: 3px;
+}
+.navbar__toggleBtn {
+  color: var(--accent-color);
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+  display:none;
+}
+.clear{
+  clear:both;
+}
+.wrap {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 150px;
+}
+footer{
+  width:150%;
+  height:150px;
+  background-color:#2c2a29;
+  position:absolute;
+  left:0;
+  bottom:0;
+}
+#footer_box{
+  width:1140px;
+  height:150px;
+  margin-left:50px;
+}
+#footer_logo{
+  float:left;
+  margin: 30px 110px 10px 0px;
+
+}
+#footer_box #address{
+  float:left;
+  margin:auto;
+  color:white;
+}
+.wrapper{
+/*     height:700px; */
+    /* background-color: lightgray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width:600px;
+    height:400px;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+}
+.slider{
+    display: flex;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.item{
+    width:100%;
+    height:400px;
+    background-color: white;
+    font-size: 35px;
+    text-align: center;
+}
+.item:nth-child(2){
+    background-color: white;
+}
+.item:nth-child(3){
+    background-color: white;
+}
+
+.container ul{
+    -webkit-transition: all 0.25s cubic-bezier(1, .01, .32, 1);
+    -o-transition: all 0.25s cubic-bezier(1, .01, .32, 1);
+    transition: all 0.25s cubic-bezier(1, .01, .32, 1);
+}
+.theme {
+  width: 100%;
+  height: 110px;
+  background-image:url(../images/background.jpg);
+  background-position: center center;
+  background-size: 100%;
+  opacity: 1;
+  position: absolute;
+  top: 200px;
+  left: 0px;
+  overflow: hidden;
+  padding: 8px 12px;
+  font-family: 'STIX Two Math';
+}
+
+
+.theme_list {
+  width: 100%;
+  height: 120px;
+  background-image:url(../images/background.jpg);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  
+}
+.theme_list_text {
+  width: 100%;
+  color: rgba(255,255,255,1);
+  position: relation;
+  top: 50px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: center;
+}
+.theme_section1{
+  margin-top:350px;
+  margin-bottom:200px;
+  margin-left:50px;
+  margin-right:50px;
+}
+.main_section1{
+  margin-top:50px;
+  margin-bottom:200px;
+  margin-left:50px;
+  margin-right:50px;
+}
+.theme_name1{
+  font-size:40px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-family: 'STIX Two Math';
+}
+.theme_list1{
+  width: 60%;
+  height: 350px;
+  background: rgba(217,217,217,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 420px;
+}
+.theme_list1_context{
+  width:60%;
+  font-size:25px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-family: 'STIX Two Math';
+  text-align: left;
+  position:absolute;
+  word-wrap:break-word;
+}
+.button1 {
+  background-color: #a628fa;
+  border: none;
+  color: white;
+  padding: 50px 100px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 50px;
+  cursor: pointer;
+  border-radius:10px;
+  display:block;
+  width:50%;
+  margin:auto;
+}
+.button2 {
+  background-color: #a628fa;
+  border: none;
+  color: white;
+  padding: 30px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius:10px;
+  display:block;
+  width:30%;
+  margin:auto;
+}
+.main-r {
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  overflow: hidden;
+  margin: 30px;
+
+}
+.main-s-top {
+  background-color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.main-s-bottom {
+  border-top: 5px solid;
+  background-color: gray;
+
+}
+.main-s-box {
+  background-color: beige;
+  width: 100%;
+  height: 25%;
+  padding: 30px;
+  margin-top: 10px;
+  font-size: 30px;
+  overflow: auto;
+}
+.main-s-check {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  background-color: darkseagreen;
+}
+
+.main-s-summit{
+  width: 100%;
+  height: 50px;
+  text-align: right;
+  background-color: beige;
+}
+.event_text{
+  font-size:40px;
+}
+@media screen and (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .navbar__menu {
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__toggleBtn {
+    display: block;
+  }
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: flex;
+  }
+  .theme {
+    width: 100%;
+    height: 110px;
+    background-image:url(../images/background.jpg);
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 250px;
+    left: 0px;
+    overflow: hidden;
+    padding: 8px 12px;
+    font-family: 'STIX Two Math';
+  }
+  
+  .theme_list {
+    width: 100%;
+    height: 120px;
+    background-image:url(../images/background.jpg);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    
+  }
+  .theme_list_text {
+    width: 100%;
+    color: rgba(255,255,255,1);
+    position: relation;
+    top: 50px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 50px;
+    opacity: 1;
+    text-align: center;
+  }
+}
