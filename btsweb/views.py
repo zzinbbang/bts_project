@@ -27,5 +27,21 @@ def event(request):
         return render(request, 'btsweb/check.html', context)
     return render(request,'btsweb/event.html')
 
+def confirm(request):
+    if request.method == "POST":
+        un = request.POST.get('un')
+        uinfo = Btsuser.objects.values('usercode','fname','lname','birthday','phone','email','address').get(usercode=un)
+        context = { "uinfo_list" : uinfo }
+        return render(request, 'btsweb/detail.html', context)
+    return render(request, 'btsweb/confirm.html')
+
+def detail(request):
+    return render(request, 'btsweb/detail.html')
+
+def delete(request, usercode):
+    uinfo = Btsuser.objects.get(usercode=usercode)
+    uinfo.delete()
+    return redirect('main')
+    
 # def check(request):
 #     return render(request,'btsweb/check.html')

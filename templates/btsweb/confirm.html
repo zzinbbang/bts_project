@@ -19,38 +19,36 @@
       <div class="navbar__logo">
         <a href="{% url 'main' %}"><img src="{% static 'images/logo_main.jpg'%}"style="max-width: 200px; height: 100px; float:left;"></a>
         <li class="main_subject"style="width:800px; float:left;">The New BTS Album Release event</li>
-      </div>
 
       <ul class="navbar__menu">
         <li><a href="{% url 'event' %}">응모하기</a></li>
-      </ul>      
-      <ul class="navbar__menu">
-        <li><a href="{% url 'confirm' %}">응모확인</a></li>
       </ul>      
       <a href="#" class="navbar__toggleBtn">
         <i class="fab fa-slack"></i>
      </a>
     </nav></div>
 </header>
-<div class="main_image"><center><img src="{% static 'images/image_main.jpg'%}"style="margin-top:50px; margin-botton:50px;"></center></div>
 
-<div class="main_script"style="margin-top:50px;"><center>방탄 이벤트<br>응모 사이트</center></div>
-<div class="wrap">
-<div class="main_section1">
-  <div class="theme_image1"><center>
-    <img src="{% static 'images/image_step.jpg'%}"style="width: 1100px; height: 400px;"></center>
-</div>
-<div class="script_style"style="margin-left:100px;">
-<div class="main_script"style="margin-top:50px; margin-bottom:50px;">응모 기간 : @@@<br>당첨자 발표 : @@@<br>경품:@@@</div>
+<body>
+    <div>
+        <h3>신청번호를 입력해주세요.</h3>
+    </div>
+    <div>
+      <form method="POST">
+        {% csrf_token %}
+        <table>
+          <tr>
+              <td class="event_text">신청번호 : </td>
+              <td><input type="text" name="un" style="width:300px;height:30px;font-size:25px;"></td>
+          </tr>
+        </table>
+        <div>
+          <div class="button2"><button type='submit'>응모하기</button></div>
+        </div>
+      </form>
+</body>
+</html>
 
-</div>
-<div>
-  <div class="button1"><a href="{% url 'event' %}">응모하기</a></div>
-</div>
-<div class="main_script2"style="margin-top:50px; margin-bottom:50px; font-size:20px;">★ 자세한 사항은 당첨자 발표 시에 안내됩니다.
-  <br>★ 당첨 시 경품 배송에 필요한 정보를 배송 업체에 제공합니다.</div>
-<div class='clear'></div>
-</div>
 <footer class="footer">
   <div id="footer_box">
       <div id="footer_logo">
