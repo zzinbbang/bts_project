@@ -17,50 +17,51 @@
     <header>
     <nav class="navbar">
       <div class="navbar__logo">
-        <a href="{% url 'main' %}"><img src="{% static 'images/logo_main.jpg'%}"style="max-width: 200px; height: 100px; float:left;"></a>
+        <a href="{% url 'main' %}"><img src="{% static 'images/bts_logo.jpg'%}"style="max-width: 200px; height: 100px; float:left;"></a>
         <li class="main_subject"style="width:800px; float:left;">The New BTS Album Release event</li>
       </div>
-
+    
       <ul class="navbar__menu">
-        <li><a href="{% url 'event' %}">응모하기</a></li>
-      </ul>      
-      <ul class="navbar__menu">
-        <li><a href="{% url 'confirm' %}">응모확인</a></li>
+        <li><a href="{% url 'event' %}">Apply</a></li>
+        <li><a href="{% url 'confirm' %}">Confirm/Cancel</a></li>
       </ul>      
       <a href="#" class="navbar__toggleBtn">
         <i class="fab fa-slack"></i>
      </a>
     </nav></div>
 </header>
-<div class="main_image"><center><img src="{% static 'images/image_main.jpg'%}"style="margin-top:50px; margin-botton:50px;"></center></div>
-
-<div class="main_script"style="margin-top:50px;"><center>방탄 이벤트<br>응모 사이트</center></div>
 <div class="wrap">
+<div class="main_image"><center><img src="{% static 'images/bts_main1.jpg'%}"style="margin-top:50px; margin-botton:50px;"></center></div>
+<div class="main_image"><center><img src="{% static 'images/bts_main_text.jpg'%}"style="margin-top:50px; margin-botton:150px; "></center></div>
+
+
 <div class="main_section1">
   <div class="theme_image1"><center>
-    <img src="{% static 'images/image_step.jpg'%}"style="width: 1100px; height: 400px;"></center>
-</div>
-<div class="script_style"style="margin-left:100px;">
-<div class="main_script"style="margin-top:50px; margin-bottom:50px;">응모 기간 : @@@<br>당첨자 발표 : @@@<br>경품:@@@</div>
+    <img src="{% static 'images/bts_step123.jpg'%}"></center>
+  </div>
 
-</div>
+<div class="main_image"><center><img src="{% static 'images/bts_main_image.jpg'%}"style="margin-top:50px; margin-botton:150px; "></center></div>
+
+<br>
+<br>
+<br>
 <div>
-  <div class="button1"><a href="{% url 'event' %}">응모하기</a></div>
-</div>
-<div class="main_script2"style="margin-top:50px; margin-bottom:50px; font-size:20px;">★ 자세한 사항은 당첨자 발표 시에 안내됩니다.
-  <br>★ 당첨 시 경품 배송에 필요한 정보를 배송 업체에 제공합니다.</div>
+  <center><button class="button1"><span><a href="{% url 'event' %}">
+    Apply</a></span></button></center>
+  </div>
+
 <div class='clear'></div>
 </div>
-<footer class="footer">
+<footer class="footer" style="background-color:#161616">
   <div id="footer_box">
       <div id="footer_logo">
-          <img src="{% static 'images/logo_main.jpg'%}"style="max-width: 100px; height: 100px;">
+          <img src="{% static 'images/bts_logo.jpg'%}"style="max-width: 100px; height: 100px;">
       </div>
       <div id="address">
           <ul>
-              <li>(주) @@엔터테이먼트   서울시 금천구 가산로</li>
-              <li>대표이사 : 5 team</li>
-              <li>사업자 등록 번호 : @@@-@@-@@@@@</li>
+              <li>Co., Ltd. @@Entertainment Gasan-ro, Geumcheon-gu, Seoul</li>
+              <li>CEO : 5 team</li>
+              <li>Company Registration Number : @@@-@@-@@@@@</li>
               <li>TEL : 010-0000-0000 Email : ####@google.com</li>
               <li>COPYRIGHT (C) @@@ ALL RIGHTS RESERVED</li>
           </ul>
@@ -69,3 +70,23 @@
 </footer> 
 </body>
 </html>
+
+<style>
+  .button1 {
+    background-color: #6453e2;
+    border: none;
+    color: white;
+    padding: 16px 16px;
+    text-align: center;
+    font-size: 50px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    width:300px;
+  }
+  
+  .button1:hover {opacity: 1}
+  </style>

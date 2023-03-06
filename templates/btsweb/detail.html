@@ -15,39 +15,53 @@
 
   <body>
     <header>
-    <nav class="navbar">
-      <div class="navbar__logo">
-        <a href="{% url 'main' %}"><img src="{% static 'images/logo_main.jpg'%}"style="max-width: 200px; height: 100px; float:left;"></a>
-        <li class="main_subject"style="width:800px; float:left;">The New BTS Album Release event</li>
+        <nav class="navbar">
+          <div class="navbar__logo">
+            <a href="{% url 'main' %}"><img src="{% static 'images/bts_logo.jpg'%}"style="max-width: 200px; height: 100px; float:left;"></a>
+            <li class="main_subject"style="width:800px; float:left;">The New BTS Album Release event</li>
+          </div>
+        
+          <ul class="navbar__menu">
+            <li><a href="{% url 'event' %}">Apply</a></li>
+            <li><a href="{% url 'confirm' %}">Confirm/Cancel</a></li>
+          </ul>      
+          <a href="#" class="navbar__toggleBtn">
+            <i class="fab fa-slack"></i>
+         </a>
+        </nav></div>
+    </header>
 
-      <ul class="navbar__menu">
-        <li><a href="{% url 'event' %}">응모하기</a></li>
-      </ul>      
-      <a href="#" class="navbar__toggleBtn">
-        <i class="fab fa-slack"></i>
-     </a>
-    </nav></div>
-</header>
 
 <body>
-    <div>
-        <h3>응모 신청 정보 확인</h3>
+  <div class="wrap">
+    <div style="font-size:25px;">
+  
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;Event application information. Please make sure it is correct!</h3>
     </div>
     <div>
       <table>
         {% for key,value in uinfo_list.items %}
         <tr>
-            <td class='key'> {{ key }} </td> <td class='value'> {{ value }} </td>
+            <th class='key'> {{ key }} </th> <td class='value'> {{ value }} </td>
         </tr>
         {% endfor %}
-        <tr>
-            <td class='button' colspan="2" style="text-align:center;">
-            <a href="{% url 'main' %}"> <button >HOME</button> </a>
-            <a href="{% url 'delete' uinfo_list.usercode %}"> <button>DELETE</button> </a>
-            </td>
-        </tr>
+        
+        
+          
     </table>
+    <br><br>
+    <div>
+    <button class="button1" style="float:left; margin-left:150px; "><span><a href="{% url 'main' %}">
+      Home</a></span></button>      
+      <button class="button1"><span><a href="{% url 'delete' uinfo_list.usercode %}">
+        Cancel Application</a></span></button>
+    </div>
 
+    <br><br><br><br><br><br><br>
+<div>
+
+
+        <br><br><br>
       {% comment %} <form method="POST">
         {% csrf_token %}
         <table>
@@ -88,16 +102,17 @@
 </body>
 </html>
 
-<footer class="footer">
+
+<footer class="footer" style="background-color:#161616">
   <div id="footer_box">
       <div id="footer_logo">
-          <img src="{% static 'images/logo_main.jpg'%}"style="max-width: 100px; height: 100px;">
+          <img src="{% static 'images/bts_logo.jpg'%}"style="max-width: 100px; height: 100px;">
       </div>
       <div id="address">
           <ul>
-              <li>(주) @@엔터테이먼트   서울시 금천구 가산로</li>
-              <li>대표이사 : 5 team</li>
-              <li>사업자 등록 번호 : @@@-@@-@@@@@</li>
+              <li>Co., Ltd. @@Entertainment Gasan-ro, Geumcheon-gu, Seoul</li>
+              <li>CEO : 5 team</li>
+              <li>Company Registration Number : @@@-@@-@@@@@</li>
               <li>TEL : 010-0000-0000 Email : ####@google.com</li>
               <li>COPYRIGHT (C) @@@ ALL RIGHTS RESERVED</li>
           </ul>
@@ -106,3 +121,47 @@
 </footer> 
 </body>
 </html>
+<style>
+  .button1 {
+    background-color: #6453e2;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 30px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    width:400px;
+  }
+  
+  .button1:hover {opacity: 1}
+
+  table {
+    width: 1000px;
+    margin-left:50px;
+    border: 1px solid #444444;
+  }
+  td {
+    border: 1px solid #444444;
+    padding: 10px;
+    margin-left:20px;
+    font-size:25px;
+  }
+  th {
+    width:300px;
+    border: 1px solid #444444;
+    padding: 10px;
+    text-align: center;
+    font-size:25px;
+  }
+  th:nth-child(2n), td:nth-child(2n) {
+    background-color: #FFF0F5;
+  }
+  th:nth-child(2n+1), td:nth-child(2n+1) {
+    background-color: #FFE4E1;
+  }
+  </style>

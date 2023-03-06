@@ -15,83 +15,133 @@
 
   <body>
     <header>
-    <nav class="navbar">
-      <div class="navbar__logo">
-        <a href="{% url 'main' %}"><img src="{% static 'images/logo_main.jpg'%}"style="max-width: 200px; height: 100px;float:left;"></a>
-        <li class="main_subject"style="width:1000px; float:left;">The New BTS Album Release event</li>
-      </div>
+        <nav class="navbar">
+          <div class="navbar__logo">
+            <a href="{% url 'main' %}"><img src="{% static 'images/bts_logo.jpg'%}"style="max-width: 200px; height: 100px; float:left;"></a>
+            <li class="main_subject"style="width:800px; float:left;">The New BTS Album Release event</li>
+          </div>
+        
+          <ul class="navbar__menu">
+            <li><a href="{% url 'event' %}">Apply</a></li>
+            <li><a href="{% url 'confirm' %}">Confirm/Cancel</a></li>
+          </ul>      
+          <a href="#" class="navbar__toggleBtn">
+            <i class="fab fa-slack"></i>
+         </a>
+        </nav></div>
+    </header>
 
-      <ul class="navbar__menu">
-        <li><a href="{% url 'event' %}">응모하기</a></li>
-      </ul>      
-      <a href="#" class="navbar__toggleBtn">
-        <i class="fab fa-slack"></i>
-     </a>
-    </nav></div>
-</header>
-<div class="wrap">
-<div class="event_script"><center>
-<div style="font-size:50px;"><center>공지사항</center></div>
-<div class="box"style="width: 40%; height: 600px; background-color:grey; overflow-y: scroll;">
-    <div style="font-size:20px; float:left;">
-        공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.공지사항.
-    </div>
-</div>
-<div style="font-size:40px; margin-top:30px;margin-bottom:20px;">EVENT</div>
-<hr width="40%" color="purple">
+    <div class="wrap">
+        <div class="event_script"><center>
+        <div class="main_image"><center><img src="{% static 'images/event_announce.jpg'%}"style="margin-top:50px; margin-botton:150px; "></center></div>
+        <div style="font-size:50px;"><center><br></center></div>
+        <div class="box"style="width: 50%; height: 600px; background-color:#fcf2ff; overflow-y: scroll;">
+        <div style="font-size:19px; float:left; text-align:justify;">
+        
+<br>How to apply<br>
+Application period: March 1, 2023 (Wed) 15:00 (KST) ~ March 31, 2023 (Fri) 23:59 (KST)<br>
+How to Participate: Among those who entered the information below and clicked the Apply button within the event period, 
+1,000 people will be given an autographed album commemorating the release of BTS' new song 
+through a lottery. (Duplicate entries are not allowed) If you apply for , 
+there will be no duplicate processing and it will be considered as one application.<br>
+Announcement of winners: Winners will be sent individual MMS after 17:00 (KST) on Saturday, April 15, 2023<>
+* This event will be operated in compliance with the COVID-19 quarantine regulations, and everyone will be required to wear a mask after entering the showcase venue (lobby, audience).<br>
+        <br>Notes on application<br> ``
+        1. You are free to apply and cancel your application until 3 days before the end of the event (March 28, 2023), but you cannot cancel at any time during the later period or after the end of the event.<br>
+        2. This event can only be received by the person himself/herself, and cannot be received by proxy or transferred/sold.<br>
+        The responsibility for damages caused by transfer/sale lies entirely with the person concerned, and if you are not the winner, you will not be able to receive the winning ticket, so please be careful when applying.<br>
+        3. For this event, the winners will be drawn only with the information used when applying. Please apply with the Korean or English name written on your ID and passport.<br>
+        4. After the announcement of the winner, it is absolutely impossible to change the name and contact information of the winner through the @@@ customer support center, and it will not be reflected. When applying, please check/cancel this website -> check the application number to make sure that the correct contact information and date of birth are applied.<br>
+       
+5. When applying for this event, the winner's personal information is provided as follows to check duplicate winners and proceed with the event.<br>
+- Items of personal information provided: Name, contact number, ID, date of birth<br>
+- Purpose of collection: To draw winners of BTS new song release autograph event winners<br>
+- Recipient of personal information: @@@Entertainment, @@Entertainment<br>
+- Retention and use period of personal information of the recipient of personal information: Within 21 days after the end of the event<br>
+6. Detailed announcements regarding the winners of this event will be announced together with the announcement of the winners.<br>
+7. This event may be partially changed or canceled without prior notice.<br><br>
+
+* Contact: 1544-0000 / Email: ####@google.com<br><br>
+        
+        </div>
+        </div><br>
+    <form  style="font-size:25px;">
+        <input type="checkbox" style="scale:2">&nbsp; I have read and agree to the above.<br>
+    </form>
+        <div class="main_image"><center><img src="{% static 'images/event_information.jpg'%}"style="margin-top:50px; margin-botton:150px; "></center></div>
+        <div style="font-size:20px; margin-top:30px;margin-bottom:20px;">Please check the contents and fill in <mark>accurately.</mark></div>
+        <hr width="60%" color="purple"><br>
+
 <div>
     <form method="POST">
         {% csrf_token %}
         <table>
             <tr>
-                <td class="event_text">FIRST_NAME : </td>
-                <td><input type="text" name="fname" style="width:300px;height:30px;font-size:25px;"></td>
+                <td class="event_text">First-Name  </td>
+                <td><input type="text" name="fname" style="width:300px;height:30px;font-size:25px;" autocomplete="off"></td>
             </tr>
             <tr>
-                <td class="event_text">LAST_NAME : </td>
-                <td><input type="text" name="lname" style="width:300px;height:30px;font-size:25px;"></td>
+                <td class="event_text">Last-Name  </td>
+                <td><input type="text" name="lname" style="width:300px;height:30px;font-size:25px;" autocomplete="off"></td>
             </tr>
             <tr>
-                <td class="event_text">BIRTHDAY : </td>
-                <td><input type="date" name="birthday" style="width:300px;height:30px;font-size:25px;"></td>
+                <td class="event_text">Birthday  </td>
+                <td><input type="date" name="birthday" style="width:300px;height:30px;font-size:25px;" autocomplete="off"></td>
             </tr>
             <tr>
-                <td class="event_text">PHONE : </td>
-                <td><input type="text" name="phone" placeholder="-빼고 입력하세요."style="width:300px;height:30px;font-size:25px;"></td>
+                <td class="event_text">Country  </td>
+                <td><input type="text" name="country" style="width:300px;height:30px;font-size:25px;" autocomplete="off"></td>
             </tr>
             <tr>
-                <td class="event_text">EMAIL : </td>
-                <td><input type="email" name="email" style="width:300px;height:30px;font-size:25px;"></td>
+                <td class="event_text">Phone  </td>
+                <td><input type="text" name="phone" placeholder="Please enter without '-'."style="width:300px;height:30px;font-size:25px;" autocomplete="off"></td>
             </tr>
             <tr>
-                <td class="event_text">ADDRESS : </td>
-                <td><input type="text" name="address" style="width:300px;height:30px;font-size:25px;"></td>
+                <td class="event_text">E-Mail  </td>
+                <td><input type="email" name="email" style="width:300px;height:30px;font-size:25px;" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td class="event_text">ZIP  </td>
+                <td><input type="text" name="zip" style="width:300px;height:30px;font-size:25px;" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td class="event_text">City  </td>
+                <td><input type="text" name="city" style="width:300px;height:30px;font-size:25px;" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td class="event_text">Address  </td>
+                <td><input type="text" name="address" style="width:300px;height:30px;font-size:25px;" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td class="event_text">Address2  </td>
+                <td><input type="text" name="anotheraddress" style="width:300px;height:30px;font-size:25px;" autocomplete="off"></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
             </tr>
         </table>
-
+        <br><br>
         <div>
-            <div class="button2"><button type='submit'>응모하기</button></div>
+            <center><button type='submit' class="button1"><span>Confirm</span></button></center>
         </div>
         </form>
 </center>
 <tr>
     <td>&nbsp;</td>
 </tr>
+<br><br><br><br>
 <div class='clear'></div>
 </div>
-<footer class="footer">
+<footer class="footer" style="background-color:#161616">
     <div id="footer_box">
         <div id="footer_logo">
-            <img src="{% static 'images/logo_main.jpg'%}"style="max-width: 100px; height: 100px;">
+            <img src="{% static 'images/bts_logo.jpg'%}"style="max-width: 100px; height: 100px;">
         </div>
         <div id="address">
             <ul>
-                <li>(주) @@엔터테이먼트   서울시 금천구 가산로</li>
-                <li>대표이사 : 5 team</li>
-                <li>사업자 등록 번호 : @@@-@@-@@@@@</li>
+                <li>Co., Ltd. @@Entertainment Gasan-ro, Geumcheon-gu, Seoul</li>
+                <li>CEO : 5 team</li>
+                <li>Company Registration Number : @@@-@@-@@@@@</li>
                 <li>TEL : 010-0000-0000 Email : ####@google.com</li>
                 <li>COPYRIGHT (C) @@@ ALL RIGHTS RESERVED</li>
             </ul>
@@ -99,4 +149,23 @@
     </div>
   </footer> 
 </body>
-</html>
+</html>  
+<style>
+    .button1 {
+      background-color: #6453e2;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 30px;
+      margin: 4px 2px;
+      opacity: 0.6;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      width:300px;
+    }
+    
+    .button1:hover {opacity: 1}
+    </style>

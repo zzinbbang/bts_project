@@ -6,6 +6,9 @@ urlpatterns = [
     path('event/', views.event, name='event'),
     # path('check/', views.check, name='check')
     path('confirm/', views.confirm, name='confirm'),
+    path('check/', views.check, name='check'),
     path('detail/', views.detail, name='detail'),
+    path('cancelpage/', views.cancelpage, name='cancelpage'),
+    path('notfind/', views.notfind, name='cancelpage'),
     path('delete/<usercode>', views.delete, name='delete')
 ]

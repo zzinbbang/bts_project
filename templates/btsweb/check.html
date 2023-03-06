@@ -15,44 +15,79 @@
 
   <body>
     <header>
-    <nav class="navbar">
-      <div class="navbar__logo">
-        <a href="{% url 'main' %}"><img src="{% static 'images/logo_main.jpg'%}"style="max-width: 200px; height: 100px; float:left;"></a>
-        <li class="main_subject"style="width:800px; float:left;">The New BTS Album Release event</li>
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="{% url 'main' %}"><img src="{% static 'images/bts_logo.jpg'%}"style="max-width: 200px; height: 100px; float:left;"></a>
+          <li class="main_subject"style="width:800px; float:left;">The New BTS Album Release event</li>
+        </div>
+      
+        <ul class="navbar__menu">
+          <li><a href="{% url 'event' %}">Apply</a></li>
+          <li><a href="{% url 'confirm' %}">Confirm/Cancel</a></li>
+        </ul>      
+        <a href="#" class="navbar__toggleBtn">
+          <i class="fab fa-slack"></i>
+       </a>
+      </nav></div>
+  </header>
 
-      <ul class="navbar__menu">
-        <li><a href="{% url 'event' %}">응모하기</a></li>
-      </ul>      
-      <a href="#" class="navbar__toggleBtn">
-        <i class="fab fa-slack"></i>
-     </a>
-    </nav></div>
-</header>
 
+<div class="wrap">
 <body>
-    <div>
-        <h3>내용을 확인해 주세요</h3>
-    </div>
-      <label for="test">신청번호 : </label>
-      <input type="text" name="un" value="{{un}}" disabled>
+  <div class="main_image"><center><img src="{% static 'images/check_image.jpg'%}"style="margin-top:50px; margin-botton:150px; "></center></div>
+  <br><br><br><br><br>
+      <label for="test" style="font-size:60px;">&nbsp;&nbsp;&nbsp;&nbsp;Your Application Number : </label>
+      <input type="text" name="un" value="{{un}}" style="width:400px;height:60px;font-size:50px;" disabled><br><br>
+      <label for="test" style="font-size:25px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◈ This number is required to verify your identity. </label>
+<br><br><br><br><br><br><br><br>
+      <div><center>
+        <div class="button2"><a href="{% url 'main' %}">Home</a></div></center>
+      </div>
+      <br>
+      <div><center>
+        <div class="button2"><a href="{% url 'confirm' %}">Confirm/Cancel</a></div></center>
+      </div>
+<br><br><br><br>
+
 </body>
 </html>
 
-<footer class="footer">
+<footer class="footer" style="background-color:#161616">
   <div id="footer_box">
       <div id="footer_logo">
-          <img src="{% static 'images/logo_main.jpg'%}"style="max-width: 100px; height: 100px;">
+        <img src="{% static 'images/bts_logo.jpg'%}"style="max-width: 100px; height: 100px;">
       </div>
       <div id="address">
           <ul>
-              <li>(주) @@엔터테이먼트   서울시 금천구 가산로</li>
-              <li>대표이사 : 5 team</li>
-              <li>사업자 등록 번호 : @@@-@@-@@@@@</li>
+              <li>Co., Ltd. @@Entertainment Gasan-ro, Geumcheon-gu, Seoul</li>
+              <li>CEO : 5 team</li>
+              <li>Company Registration Number : @@@-@@-@@@@@</li>
               <li>TEL : 010-0000-0000 Email : ####@google.com</li>
               <li>COPYRIGHT (C) @@@ ALL RIGHTS RESERVED</li>
           </ul>
       </div>
   </div>
+</div>
 </footer> 
 </body>
 </html>
+
+<style>
+  .button2 {
+    background-color: #6453e2;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 50px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
+  
+  .button2:hover {opacity: 1}
+  </style>
