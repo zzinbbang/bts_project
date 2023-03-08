@@ -86,6 +86,3 @@ def delete(request, usercode):
 
 def cancelpage(request):
     return render(request, 'btsweb/cancelpage.html')
-
-def sign(request, usercode):
-    return render(request, 'btsweb/sign.html')
