@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'testdb',
         'USER': 'admin',
         'PASSWORD': 'a114949*',
-        'HOST': 'test-db-1.cluster-cv5ie1bvgbmd.ap-northeast-2.rds.amazonaws.com',
+        'HOST': 'test-db-1.cluster-c9c32i5j9p3r.ap-northeast-1.rds.amazonaws.com',
         'PORT': '3306'
     }
 }
