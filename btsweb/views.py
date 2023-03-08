@@ -37,9 +37,9 @@ def event(request):
 
 def confirm(request):
     if request.method == "POST":
-        bool_un = Btsuser.objects.filter(usercode='un').exists()
+        un = request.POST.get('un')
+        bool_un = Btsuser.objects.filter(usercode=un).exists()
         if bool_un == True :
-            un = request.POST.get('un')
             uinfo = Btsuser.objects.values('usercode','fname','lname','birthday','country','phone','email','zip','city','address','anotheraddress').get(usercode=un)
             context = { "uinfo_list" : uinfo }
             return render(request, 'btsweb/detail.html', context)
