@@ -73,9 +73,6 @@ def confirm(request):
 def detail(request):
     return render(request, 'btsweb/detail.html')
 
-def detail(request):
-    return render(request, 'btsweb/detail.html')
-
 def check(request):
     return render(request, 'btsweb/check.html')
 
@@ -86,3 +83,6 @@ def delete(request, usercode):
 
 def cancelpage(request):
     return render(request, 'btsweb/cancelpage.html')
+
+def sign(request):
+    return render(request, 'btsweb/sign.html')
