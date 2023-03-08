@@ -18,7 +18,6 @@ def event(request):
         an = request.POST.get('address')
         anan = request.POST.get('anotheraddress')
         un = makeUcode()
-        
         if fn=='':
             return render(request, 'btsweb/sign.html')
         elif ln=='':
