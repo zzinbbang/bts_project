@@ -9,6 +9,6 @@ urlpatterns = [
     path('check/', views.check, name='check'),
     path('detail/', views.detail, name='detail'),
     path('cancelpage/', views.cancelpage, name='cancelpage'),
-    path('notfind/', views.notfind, name='cancelpage'),
-    path('delete/<usercode>', views.delete, name='delete')
+    path('delete/<usercode>', views.delete, name='delete'),
+    path('sign/', views.sign, name='sign'),
 ]

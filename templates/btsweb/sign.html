@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <script src="https://kit.fontawesome.com/dfc71a94a6.js" crossorigin="anonymous"></script>
+        <script src="{% static 'javascript/js/main.js'%}" defer></script>
+        <script src="{% static 'javascript/js/slide.js'%}" defer></script>
+    <title>BTS 이벤트 응모</title>
+  </head>
+
+  <body>
+    <header>
+        <nav class="navbar">
+          <div class="navbar__logo">
+            <a href="{% url 'main' %}"><img src="{% static 'images/bts_logo.jpg'%}"style="max-width: 200px; height: 100px; float:left;"></a>
+            <li class="main_subject"style="width:800px; float:left;">The New BTS Album Release event</li>
+          </div>
+        
+          <ul class="navbar__menu">
+            <li><a href="{% url 'event' %}">Apply</a></li>
+            <li><a href="{% url 'confirm' %}">Confirm/Cancel</a></li>
+          </ul>      
+          <a href="#" class="navbar__toggleBtn">
+            <i class="fab fa-slack"></i>
+         </a>
+        </nav></div>
+    </header>
+
+<div class="wrap">
+<body>
+    <div style="font-size:40px;">
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp;Please <span style="color:red; text-decoration: underline">enter the correct information</span> to participate in the event.</h3>
+    </div>
+    <div style="font-size:40px;">
+        <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            If you do not enter the relevant information,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you may experience disadvantages when applying for events and winning prizes in the future.</h3>
+      </div>
+    <br><br><br><br><br>
+
+    <div>
+        <div><center><button class="button1" style="float:left; margin-left:150px;"><a href="{% url 'main' %}">Home</a></button></center></div>
+        <div><button class="button1"><a href="{% url 'event' %}">Back</a></button></div>
+
+    </div>
+</body>
+</html>
+
+<footer class="footer" style="background-color:#161616">
+  <div id="footer_box">
+      <div id="footer_logo">
+          <img src="{% static 'images/bts_logo.jpg'%}"style="max-width: 100px; height: 100px;">
+      </div>
+      <div id="address">
+          <ul>
+              <li>Co., Ltd. @@Entertainment Gasan-ro, Geumcheon-gu, Seoul</li>
+              <li>CEO : 5 team</li>
+              <li>Company Registration Number : @@@-@@-@@@@@</li>
+              <li>TEL : 010-0000-0000 Email : ####@google.com</li>
+              <li>COPYRIGHT (C) @@@ ALL RIGHTS RESERVED</li>
+          </ul>
+      </div>
+  </div>
+</div>
+</footer> 
+</body>
+</html>
+
+<style>
+  .button1 {
+    background-color: #6453e2;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 30px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    width:300px;
+  }
+  
+  .button1:hover {opacity: 1}
+  </style>
